@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83BB469E-DF01-48B2-B0B3-493D6407F2FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PracticaFinal</RootNamespace>
+    <AssemblyName>PracticaFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\ActualizarBD.cs" />
+    <Compile Include="Controlador\Consultas.cs" />
+    <Compile Include="Formularios\ContratoyPregFrec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ContratoyPregFrec.Designer.cs">
+      <DependentUpon>ContratoyPregFrec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FinalizarPedidoMetComplementario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FinalizarPedidoMetComplementario.Designer.cs">
+      <DependentUpon>FinalizarPedidoMetComplementario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteDoctorObraSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteDoctorObraSocial.Designer.cs">
+      <DependentUpon>ReporteDoctorObraSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteFichaEstados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFichaEstados.Designer.cs">
+      <DependentUpon>ReporteFichaEstados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteFichaEdad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFichaEdad.Designer.cs">
+      <DependentUpon>ReporteFichaEdad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteInsumoFaltantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteInsumoFaltantes.Designer.cs">
+      <DependentUpon>ReporteInsumoFaltantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ConsultaPedidoMetComplementario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ConsultaPedidoMetComplementario.Designer.cs">
+      <DependentUpon>ConsultaPedidoMetComplementario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\HistorialClinicoTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\HistorialClinicoTodos.Designer.cs">
+      <DependentUpon>HistorialClinicoTodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\HistorialClinico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\HistorialClinico.Designer.cs">
+      <DependentUpon>HistorialClinico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AltaPedidoMetComplementario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AltaPedidoMetComplementario.Designer.cs">
+      <DependentUpon>AltaPedidoMetComplementario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionPedidoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionPedidoInventario.Designer.cs">
+      <DependentUpon>GestionPedidoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ListaPrioridades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ListaPrioridades.Designer.cs">
+      <DependentUpon>ListaPrioridades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionTurnos.Designer.cs">
+      <DependentUpon>GestionTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AsignarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AsignarTurno.Designer.cs">
+      <DependentUpon>AsignarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AceptarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AceptarTurno.Designer.cs">
+      <DependentUpon>AceptarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AntecedentesABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AntecedentesABM.Designer.cs">
+      <DependentUpon>AntecedentesABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GrillaSeleccionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GrillaSeleccionar.Designer.cs">
+      <DependentUpon>GrillaSeleccionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MenuGeneral.Designer.cs">
+      <DependentUpon>MenuGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\InventarioABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\InventarioABM.Designer.cs">
+      <DependentUpon>InventarioABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PacienteABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PacienteABM.Designer.cs">
+      <DependentUpon>PacienteABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FichaMedABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FichaMedABM.Designer.cs">
+      <DependentUpon>FichaMedABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AltaPedidoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AltaPedidoInventario.Designer.cs">
+      <DependentUpon>AltaPedidoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\UsuarioABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\UsuarioABM.Designer.cs">
+      <DependentUpon>UsuarioABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Antecedente.cs" />
+    <Compile Include="Modelos\IndiceHC.cs" />
+    <Compile Include="Modelos\PedidoComplementario.cs" />
+    <Compile Include="Modelos\PedidoInventario.cs" />
+    <Compile Include="Modelos\Articulo.cs" />
+    <Compile Include="Modelos\ObjetoGral.cs" />
+    <Compile Include="Modelos\Paciente.cs" />
+    <Compile Include="Modelos\FichaMedica.cs" />
+    <Compile Include="Modelos\ReporteVariables.cs" />
+    <Compile Include="Modelos\Turno.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Formularios\ContratoyPregFrec.resx">
+      <DependentUpon>ContratoyPregFrec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FinalizarPedidoMetComplementario.resx">
+      <DependentUpon>FinalizarPedidoMetComplementario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FichaEdad.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InsumosFaltantes.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteDoctorObraSocial.resx">
+      <DependentUpon>ReporteDoctorObraSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteFichaEstados.resx">
+      <DependentUpon>ReporteFichaEstados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteFichaEdad.resx">
+      <DependentUpon>ReporteFichaEdad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteInsumoFaltantes.resx">
+      <DependentUpon>ReporteInsumoFaltantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConsultaPedidoMetComplementario.resx">
+      <DependentUpon>ConsultaPedidoMetComplementario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\HistorialClinicoTodos.resx">
+      <DependentUpon>HistorialClinicoTodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\HistorialClinico.resx">
+      <DependentUpon>HistorialClinico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AltaPedidoMetComplementario.resx">
+      <DependentUpon>AltaPedidoMetComplementario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionPedidoInventario.resx">
+      <DependentUpon>GestionPedidoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ListaPrioridades.resx">
+      <DependentUpon>ListaPrioridades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionTurnos.resx">
+      <DependentUpon>GestionTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AsignarTurno.resx">
+      <DependentUpon>AsignarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AceptarTurno.resx">
+      <DependentUpon>AceptarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AntecedentesABM.resx">
+      <DependentUpon>AntecedentesABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GrillaSeleccionar.resx">
+      <DependentUpon>GrillaSeleccionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuGeneral.resx">
+      <DependentUpon>MenuGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\InventarioABM.resx">
+      <DependentUpon>InventarioABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PacienteABM.resx">
+      <DependentUpon>PacienteABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FichaMedABM.resx">
+      <DependentUpon>FichaMedABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AltaPedidoInventario.resx">
+      <DependentUpon>AltaPedidoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\UsuarioABM.resx">
+      <DependentUpon>UsuarioABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reportes\FichaEstados.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ReporteVariables.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="contrato.txt" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
